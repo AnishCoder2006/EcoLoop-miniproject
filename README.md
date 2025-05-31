@@ -1,4 +1,4 @@
 seller Mainpage:
-http://127.0.0.1:5500/shjs.html
+https://anishcoder2006.github.io/EcoLoop-miniproject/shjs.html
 Refurbisher homepage:
-http://127.0.0.1:5500/refurbisher1.html
+https://anishcoder2006.github.io/EcoLoop-miniproject/refurbisher1.html
