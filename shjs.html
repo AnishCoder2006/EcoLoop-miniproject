@@ -1,71 +1,71 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sell Your Old Products</title>
     <link rel="stylesheet" href="pro.css">
-    <head></head>
-    <body>
-
-        <div class="container">
-            <h1 class="heading">
-                List The Products
-            </h1>
-        <script src="pro.js"></script>
-         <div class="tv">
-            <h1>T.V.</h1>
-        <img src="tv1.png" alt="">
-    
-        <p>Enter Brand Name:
-            <input type="text" placeholder="BrandName"><br>
-            Enter Quantity:
-            <input type="number">
-        </p>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="pro.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Sell Your Old Products</h1>
+        <form id="sellForm">
+            <div class="tv">
+                <h1>T.V.</h1>
+                <img src="tv1.png" alt="">
+                <p>
+                    Enter Brand Name:
+                    <input type="text" name="tvBrand" placeholder="BrandName"><br>
+                    Enter Quantity:
+                    <input type="number" name="tvQty">
+                </p>
+            </div>
+            <div class="lap">
+                <h1>Laptop</h1>
+                <img src="lap1.png" alt="">
+                <p>
+                    Enter Brand Name:
+                    <input type="text" name="laptopBrand" placeholder="BrandName"><br>
+                    Enter Quantity:
+                    <input type="number" name="laptopQty">
+                </p>
+            </div>
+            <div class="mob">
+                <h1>SmartPhone</h1>
+                <img src="mob1.png" alt="">
+                <p>
+                    Enter Brand Name:
+                    <input type="text" name="mobileBrand" placeholder="BrandName"><br>
+                    Enter Quantity:
+                    <input type="number" name="mobileQty">
+                </p>
+            </div>
+            <div class="washing-machine">
+                <h1>Washing Machine</h1>
+                <img src="wash.png" alt="">
+                <p>
+                    Enter Brand Name:
+                    <input type="text" name="washBrand" placeholder="BrandName"><br>
+                    Enter Quantity:
+                    <input type="number" name="washQty">
+                </p>
+            </div>
+            <div class="others">
+                <h1>Others</h1>
+                <img src="others.png" alt="">
+                <p>
+                    Enter Brand Name:
+                    <input type="text" name="otherBrand" placeholder="BrandName"><br>
+                    Enter Quantity:
+                    <input type="number" name="otherQty">
+                </p>
+            </div>
+            <p>Description...</p>
+            <textarea name="description" id="description" placeholder="Enter description"></textarea>
+            <br><br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
     </div>
-        <div class="lap">
-            <h1>Laptop</h1>
-            <img src="lap1.png" alt="">
-              <p>Enter Brand Name:
-            <input type="text" placeholder="BrandName"><br>
-            Enter Quantity:
-            <input type="number">
-        </p>
-        </div>
-       
-        <div class="mob">
-            <h1>SmartPhone</h1>
-<img src="mob1.png" alt="">
-  <p>Enter Brand Name:
-            <input type="text" placeholder="BrandName"><br>
-            Enter Quantity:
-            <input type="number">
-        </p>
-        </div>
-        <div class="Others">
-            <h1>WashingMachine</h1>
-            <img src="wash.png" alt="">
-             <p>Enter Brand Name:
-            <input type="text" placeholder="BrandName"><br>
-            Enter Quantity:
-            <input type="number">
-        </p>
-        </div>
-         <div class="Others">
-            <h1>Others</h1>
-            <img src="others.png" alt="">
-             <p>Enter Brand Name:
-            <input type="text" placeholder="BrandName"><br>
-            Enter Quantity:
-            <input type="number">
-        </p>
-        </div>
-        <br>
-        <br>
-        <br>
-       <p> Description... </p>
-        <textarea name="" id="" placeholder="Enter  description">
-            
-        </textarea>
-        <br>
-        <br>
-        <br>
-        <button onclick="submitForm()">Submit</button>
-        </div>
-    </body>
+</body>
 </html>

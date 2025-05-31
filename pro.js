@@ -1,22 +1,37 @@
+
 function submitForm() {
-    const inputs = document.querySelectorAll(".tv input, .lap input, .others input, .mob input");
-    const data = {};
+    const data = {
+        tv: {
+            brand: document.querySelector('input[name="tvBrand"]').value,
+            quantity: document.querySelector('input[name="tvQty"]').value
+        },
+        laptop: {
+            brand: document.querySelector('input[name="laptopBrand"]').value,
+            quantity: document.querySelector('input[name="laptopQty"]').value
+        },
+        mobile: {
+            brand: document.querySelector('input[name="mobileBrand"]').value,
+            quantity: document.querySelector('input[name="mobileQty"]').value
+        },
+        washingMachine: {
+            brand: document.querySelector('input[name="washBrand"]').value,
+            quantity: document.querySelector('input[name="washQty"]').value
+        },
+        others: {
+            brand: document.querySelector('input[name="otherBrand"]').value,
+            quantity: document.querySelector('input[name="otherQty"]').value
+        },
+        description: document.getElementById("description").value
+    };
 
-    inputs.forEach(input => {
-        const parentDiv = input.closest("div");
-        const category = parentDiv.classList[0]; // Gets category name (e.g., "tv", "lap")
+    fetch("http://localhost:3000/store-data", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => alert(res.message || "Data submitted successfully!"))
+    .catch(err => alert("Error submitting data!"));
 
-        if (!data[category]) {
-            data[category] = {};
-        }
-
-        if (input.type === "text") {
-            data[category].brand = input.value;
-        } else if (input.type === "number") {
-            data[category].quantity = input.value;
-        }
-    });
-
-    console.log("Submitted Data:", data); // Logs final data when submitted
-    alert("Data submitted successfully! Check console for details.");
+    console.log("Submitted Data:", data);
 }
